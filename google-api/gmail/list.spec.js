@@ -20,12 +20,16 @@ describe("", () => {
         google.options({auth});
 
         // you will received message which you id
-        // const res = await gmail.users.messages.get({userId: 'me', id: '172229156eb88531', format: 'full'});
-        // console.log(res.data.payload.body)
+        const res = await gmail.users.messages.get({userId: 'me', id: '172229156eb88531', format: 'full'});
+        const body = res.data.payload.body;
+        console.log(body);
+        const encodeBody = new Buffer.from ( body.data, "base64");
+        const encodeBodyToString = encodeBody.toString();
+        console.log(encodeBodyToString);
 
         // you will received all messages this gmail
-        const res = await gmail.users.messages.list({userId: "me"});
-        console.log(res.data)
+        // const res = await gmail.users.messages.list({userId: "me"});
+        //  console.log(res.data)
 
         return res.data;
 
