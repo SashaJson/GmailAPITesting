@@ -1,5 +1,5 @@
 {
-  "name": "testab",
+  "name": "apigoogletest",
   "version": "1.0.0",
   "main": "index.spec.js",
   "scripts": {
@@ -8,11 +8,20 @@
   "keywords": [],
   "author": "Alexander Shulga",
   "license": "ISC",
-  "description": "",
+  "description": "testing gmail api",
   "dependencies": {
     "@google-cloud/local-auth": "^0.1.0",
     "googleapis": "^51.0.0",
     "jest": "^26.0.1",
     "puppeteer": "^3.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaJson/GmailAPITesting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SashaJson/GmailAPITesting/issues"
+  },
+  "homepage": "https://github.com/SashaJson/GmailAPITesting#readme"
 }
