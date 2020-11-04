@@ -8,9 +8,9 @@ const defaults = require("../../config/default");
 
 jest.setTimeout(defaults.timeOutForJest);
 
-describe('', () => {
+describe('Testing', () => {
 
-    it("0. Watch", async () => {
+    it("0. Watch all message in box", async () => {
 
         const auth = await authenticate({
             keyfilePath: path.join(__dirname, 'oauth2.keys.json'),
@@ -30,8 +30,11 @@ describe('', () => {
                 topicName: 'projects/hip-catalyst-277220/topics/gmail',
             },
         });
+
         console.log(res.data);
+
         return res.data;
 
     });
-})
+
+});
