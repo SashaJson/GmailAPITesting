@@ -10,7 +10,7 @@ jest.setTimeout(defaults.timeOutForJest);
 
 describe('', () => {
 
-    it('0. Send message to...', async () => {
+    it('0. Send message to Alexander Shulga (JSON)', async () => {
 
         const auth = await authenticate({
             keyfilePath: path.join(__dirname, 'oauth2.keys.json'),
