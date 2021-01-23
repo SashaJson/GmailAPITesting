@@ -6,7 +6,7 @@
     "test": "jest -i --verbose"
   },
   "keywords": [],
-  "author": "Alexander Shulga",
+  "author": "Alexander Shulha (sasjamiller666@gmail.com)",
   "license": "ISC",
   "description": "testing gmail api",
   "dependencies": {
