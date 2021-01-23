@@ -1,14 +1,16 @@
 'use strict';
 
+const {timeOutForJest} = require('../../config/default');
+
 const path = require('path');
-const {google} = require('googleapis');
-const {authenticate} = require('@google-cloud/local-auth');
-const gmail = google.gmail('v1');
-const defaults = require('../../config/default');
 
-jest.setTimeout(defaults.timeOutForJest);
+const {google} = require('googleapis'),
+    {authenticate} = require('@google-cloud/local-auth'),
+    gmail = google.gmail('v1');
 
-describe('Testing', () => {
+jest.setTimeout(timeOutForJest);
+
+describe('Automation testing watch message in box', () => {
 
     it('0. Watch all message in box', async () => {
 
@@ -37,4 +39,4 @@ describe('Testing', () => {
 
     });
 
-});
+}); // describe (Automation testing watch message in box)

@@ -1,16 +1,18 @@
 'use strict';
 
-const defaults = require('../../config/default');
-const {google} = require('googleapis');
-const gmail = google.gmail('v1');
+const {timeOutForJest} = require('../../config/default');
+
+const {google} = require('googleapis'),
+    gmail = google.gmail('v1'),
+    {authenticate} = require('@google-cloud/local-auth');
+
 const path = require('path')
-const {authenticate} = require('@google-cloud/local-auth');
 
-jest.setTimeout(defaults.timeOutForJest);
+jest.setTimeout(timeOutForJest);
 
-describe('', () => {
+describe('Automation testing sending message', () => {
 
-    it('0. Send message to Alexander Shulga (JSON)', async () => {
+    it('0. Send message to Alexander Shulha (JSON) (sashamiller666@gmail.com)', async () => {
 
         const auth = await authenticate({
             keyfilePath: path.join(__dirname, 'oauth2.keys.json'),
@@ -60,4 +62,4 @@ describe('', () => {
 
     });
 
-});
+}); // describe (Automation testing sending message)
